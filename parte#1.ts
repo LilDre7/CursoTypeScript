@@ -19,7 +19,7 @@ adios = 1
 
 // Function
 // Se le debe dar un tipo de dato.
-function saludar({name: string , age: number}) {
-  console.log("Hello World")
+function saludar({name , age} : {name: string , age: number}) {
+  console.log(`Hello ${name}, tienes ${age} años`)
 }
 saludar({name: "Lil dree" , age: 20})
