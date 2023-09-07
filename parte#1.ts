@@ -63,7 +63,7 @@ type hexadecimal = `#${string}`
 const color: hexadecimal = "#0033ff"
 const colorDos: hexadecimal = "#230021"
 
-//! Union Types
+//! Union Types ⚔️ !//
 
 type heroPowerScale = "local" | "planetary"  | "low" | "heigth" | "galactic"
 
@@ -73,6 +73,21 @@ let planetId: string | number
 
 planetId = 1
 
-let myAge: 20 | number
+let myAge: 20 | 20
 
-myAge = 1
+myAge = 20
+
+// ! Intersection Types == & 🐲 !//
+
+type userInfoPersonal = {
+  name: string,
+  age: number
+}
+
+type userDateProfesional = {
+  id: number,
+  position: string,
+  available: boolean
+}
+
+type fullUser = userDateProfesional & userDateProfesional
