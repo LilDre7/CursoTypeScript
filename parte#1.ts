@@ -58,11 +58,8 @@ para poder darla la option de no obligatorio a nuestro dato */
 
 // Template union types
 type hexadecimal = `#${string}`
-type objectNew = {}
 
 const color: hexadecimal = "#0033ff"
 const colorDos: hexadecimal = "#230021"
-
-const objVacio: objectNew = []
 
 // Option Properties ⚗️
