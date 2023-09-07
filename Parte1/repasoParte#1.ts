@@ -81,7 +81,7 @@ type rulesColor = 212
 
 const Newhexadecimal: rulesColor = 212
 
-type NEWRGBA = [number , number, number]
+type NEWRGBA = readonly [number , number, number]
 
 const black: NEWRGBA = [0 , 1 , 2 ]
 
