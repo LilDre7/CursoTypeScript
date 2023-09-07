@@ -83,6 +83,6 @@ const Newhexadecimal: rulesColor = 212
 
 type NEWRGBA = readonly [number , number, number]
 
-const black: NEWRGBA = [0 , 1 , 2 ]
+const black: NEWRGBA = [0 , 1 , 2  ]
 
 // const white: NEWRGBA = ["2" , "3" , "8"]
