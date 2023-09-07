@@ -52,6 +52,7 @@ const createHero = (hero: Hero): Hero => {
   return { name, age }
 }
 
+//! Option Properties ⚗️ == ?
 // Optional Properties
 /* Es cuando colocamos alguna opcion el signo de interrogaccion = ? = 
 para poder darla la option de no obligatorio a nuestro dato */
@@ -62,4 +63,16 @@ type hexadecimal = `#${string}`
 const color: hexadecimal = "#0033ff"
 const colorDos: hexadecimal = "#230021"
 
-// Option Properties ⚗️
+//! Union Types
+
+type heroPowerScale = "local" | "planetary"  | "low" | "heigth" | "galactic"
+
+// Example
+// Acaepta cualquier estos 2 valores
+let planetId: string | number
+
+planetId = 1
+
+let myAge: 20 | number
+
+myAge = 1
