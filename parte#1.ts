@@ -35,26 +35,26 @@ const numbers: number[] = [
 ]
 
 // Type Alias
-type Hero = {
-  name: string,
-  age: number,
-  available?: boolean
-}
+// type Hero = {
+//   name: string,
+//   age: number,
+//   available?: boolean
+// }
 
-let hero: Hero = {
-  name: "thor",
-  age: 20,
-  available: true
-}
+// let hero: Hero = {
+//   name: "thor",
+//   age: 20,
+//   available: true
+// }
 
-const createHero = (hero: Hero): Hero => {
-  const { name, age } = hero
-  return { name, age }
-}
+// const createHero = (hero: Hero): Hero => {
+//   const { name, age } = hero
+//   return { name, age }
+// }
 
 //! Option Properties ⚗️ == ?
 // Optional Properties
-/* Es cuando colocamos alguna opcion el signo de interrogaccion = ? = 
+/* Es cuando colocamos alguna opcion el signo de interrogaccion = ? =
 para poder darla la option de no obligatorio a nuestro dato */
 
 // Template union types
@@ -134,13 +134,13 @@ type Address = ReturnType<typeof createNewAddress>
 
 // !Arrays en TypeScript 🤹🏾‍♀️ /!/
 
-const lenguajes: (string | number)[] = []
+// const lenguajes: (string | number)[] = []
 
-lenguajes.push("Java", "TypeScript" , 20 , 10 , 14)
+// lenguajes.push("Java", "TypeScript" , 20 , 10 , 14)
 
 // !Matrices y tuplas 🪐 /!/
 
-// Example: 
+// Example:
 
 /*
 [
@@ -152,10 +152,29 @@ lenguajes.push("Java", "TypeScript" , 20 , 10 , 14)
 
 type CellValue = "x" | "o" | ""
 
-const gameBoard: string[][] = [
+// ¿Que es una tupla?
+// Las tuplas son arrays con condiciones
+
+type GameBoard = [
+  [CellValue , CellValue , CellValue],
+  [CellValue , CellValue , CellValue],
+  [CellValue , CellValue , CellValue]
+]
+
+const gameBoard: GameBoard = [
   ["x" , "o" , "x"],
   ["o" , "x" , "x"],
   ["o" , "x" , "o"]
 ]
 
 // string[][] == Esto nos indica que es un array y que adentro dentra arrays tambien 🤹🏾‍♀️
+
+// Ejemplo de tuplas #1
+// type State = [String , (newName: string) => void]
+// const [hero , setHero] = useState("thor")
+
+// Ejemplo de tuplas #2
+
+type RGB = [number , number, number]
+
+const rgb: RGB = [20 , 20 , 2]
