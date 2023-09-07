@@ -65,7 +65,7 @@ const colorDos: hexadecimal = "#230021"
 
 //! Union Types ⚔️ !//
 
-type heroPowerScale = "local" | "planetary"  | "low" | "heigth" | "galactic"
+type heroPowerScale = "local" | "planetary" | "low" | "heigth" | "galactic"
 
 // Example
 // Acaepta cualquier estos 2 valores
@@ -77,7 +77,7 @@ let myAge: 20 | 20
 
 myAge = 20
 
-// ! Intersection Types == & 🐲 !//
+// ! Intersection Types == & 🐲 /!/
 
 type userInfoPersonal = {
   name: string,
@@ -91,3 +91,71 @@ type userDateProfesional = {
 }
 
 type fullUser = userDateProfesional & userDateProfesional
+
+//! Type Indexing ⚗️ /!/
+
+type heroProperties = {
+  isActive: boolean,
+  address: {
+    planet: string,
+    numberCity: number
+  }
+}
+
+const address: heroProperties["address"] = {
+  planet: "Mart",
+  numberCity: 201,
+}
+
+// Type From value
+
+const Newaddress = {
+  planetId: 212,
+  planetNew: "Land"
+}
+
+type FullAddress = typeof Newaddress
+
+const addreesPractice: FullAddress = {
+  planetId: 212,
+  planetNew: "Land"
+  /// numberUsers: 20 == Errror 🧨
+}
+
+//! type from function return /!/
+function createNewAddress() {
+  return {
+    planet: "land",
+    city: "Guana"
+  }
+}
+
+type Address = ReturnType<typeof createNewAddress>
+
+// !Arrays en TypeScript 🤹🏾‍♀️ /!/
+
+const lenguajes: (string | number)[] = []
+
+lenguajes.push("Java", "TypeScript" , 20 , 10 , 14)
+
+// !Matrices y tuplas 🪐 /!/
+
+// Example: 
+
+/*
+[
+  ["x" , "o" , "x"]
+  ["o" , "x" , "x"]
+  ["o" , "x" , "o"]
+]
+*/
+
+type CellValue = "x" | "o" | ""
+
+const gameBoard: string[][] = [
+  ["x" , "o" , "x"],
+  ["o" , "x" , "x"],
+  ["o" , "x" , "o"]
+]
+
+// string[][] == Esto nos indica que es un array y que adentro dentra arrays tambien 🤹🏾‍♀️
