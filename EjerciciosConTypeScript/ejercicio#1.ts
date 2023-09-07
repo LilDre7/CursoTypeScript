@@ -7,10 +7,13 @@ const arrayNumbers: NUM__ARR = [
 ];
 
 const sumTwoFirstNum = (arrayNumbers) => {
-  for (let i in arrayNumbers) {
-    return arrayNumbers[i]
+  for (let i = 0; i < arrayNumbers; i++) {
+    const element = arrayNumbers[i]
+    return element
   }
 }
 
 console.log(sumTwoFirstNum(arrayNumbers))
 
+  
+}
